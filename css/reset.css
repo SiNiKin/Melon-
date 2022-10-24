@@ -32,6 +32,12 @@
 
 @font-face{
     font-family: "Inter";
+    src: url(../fonts/Inter_Tight/InterTight-Medium.ttf);
+    font-size: 500;
+}
+
+@font-face{
+    font-family: "Inter";
     src: url(../fonts/Inter_Tight/InterTight-Regular.ttf);
     font-size: 300;
 }

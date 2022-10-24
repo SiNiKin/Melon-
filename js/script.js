@@ -51,5 +51,13 @@ $(document).ready(function(){
   mySwiper2.controller.control = mySwiper3;
   mySwiper3.controller.control = mySwiper2;
     
+  var mySwiper4 = new Swiper('.swiper-container-4', {
+
+    speed: 1200,
+    grabCursor: true,
+    // centeredSlides: true,
+    slidesPerView: "auto",
+    
+  });
 
 });

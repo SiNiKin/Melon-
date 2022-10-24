@@ -13,7 +13,7 @@ header{
     width: 100%;
     height: 100px;
     border-bottom: 2px solid rgb(51,51,51,0.5);
-    box-shadow: 0 1px 1px rgba(0,0,0,0.25);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.15);
 }
 header .container{
     width: 100%;
@@ -161,6 +161,7 @@ header .container .hd-right a:hover{
     border: 5px solid #00CD3C;
     border-radius: 50px;
     padding: 0 16px;
+    outline: none;
 }
 
 .main .container .main-top .main-top-right{
@@ -223,7 +224,7 @@ header .container .hd-right a:hover{
     font-weight: 700;
     text-align: center;
     color: #333;
-    text-shadow: -5px 3px 3px rgba(0,0,0,0.25);
+    text-shadow: -5px 3px 3px rgba(51,51,51,0.15);
     margin-bottom: 28.74px;
 }
 
@@ -236,7 +237,7 @@ header .container .hd-right a:hover{
 .main-new-album-box .main-green-box .main-new-album{
     width: 348.72px;
     height: 348.72px;
-    box-shadow: -8px -10px 8px 5px rgba(0,0,0,0.25);
+    box-shadow: -8px -10px 8px 5px rgba(51,51,51,0.2);
     transform: translate(20px,16.85px);
     position: relative;
     cursor: pointer;
@@ -289,7 +290,7 @@ header .container .hd-right a:hover{
 .new-album-box .new-album{
     width: 232.48px;
     height: 232.48px;
-    box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+    box-shadow: 0 4px 4px rgba(51,51,51,0.15);
     margin-right: 18px;
     margin-bottom: 18px;
     position: relative;
@@ -340,7 +341,7 @@ header .container .hd-right a:hover{
     width: 500px;
     height: 232px;
     background-color: #fff;
-    box-shadow: 0 2px 2px 1px rgba(0,0,0,0.25);
+    box-shadow: 0 0 2px 1px rgba(51,51,51,0.15);
 
     display: flex;
     flex-direction: column;
@@ -363,12 +364,13 @@ header .container .hd-right a:hover{
     height: 60px;
     background-color: #00CD3C;
     border-radius: 50px;
-    box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+    box-shadow: 0 4px 4px rgba(51,51,51,0.15);
     cursor: pointer;
+    /* transition: all 1s; */
 }
 
 .main .container .main-bottom .main-bottom-right .login-box .login-btn:hover{
-    box-shadow: 0 4px 4px rgba(0,0,0,0.25) inset;
+    box-shadow: 0 4px 4px rgba(51,51,51,0.15) inset;
 }
 
 .main .container .main-bottom .main-bottom-right .login-box .login-btn a{
@@ -443,6 +445,7 @@ header .container .hd-right a:hover{
     width: 150px;
     height: 150px;
     margin-right: 24px;
+    box-shadow: 0 4px 4px rgb(51,51,51,0.25);
     cursor: pointer;
 }
 
@@ -530,7 +533,7 @@ header .container .hd-right a:hover{
     width: 139.97px;
     height: 139.97px;
     transform: translate(8px,6px);
-    box-shadow: -2px -5px 5px 2px rgba(0,0,0,0.25);
+    box-shadow: -2px -5px 5px 2px rgba(51,51,51,0.2);
     cursor: pointer;
 }
 
@@ -582,7 +585,7 @@ header .container .hd-right a:hover{
     height: 700px;
     background-color: #fff;
     border: 1px solid #00CD3C;
-    box-shadow: -10px -8px 8px 3px rgba(0,0,0,0.25);
+    box-shadow: -10px -8px 8px 3px rgba(51,51,51,0.25);
     transform: translate(50px,37px);
 
     display: flex;
@@ -722,7 +725,7 @@ header .container .hd-right a:hover{
     align-items: center;
     justify-content: space-between;
     padding: 0 331px;
-    margin-bottom: 280px;
+    margin-bottom: 296px;
 }
 
 .swiper-container-3{
@@ -789,23 +792,56 @@ header .container .hd-right a:hover{
     cursor: pointer;
 }
 
+/* .swiper-slide-active{
+    opacity: 1;
+} */
+
 /* sec3 끝---------------------- */
 
 /* sec4 */
 
 .sec4 .container{
-    margin-bottom: 360px;
+    margin-bottom: 336px;
+}
+
+.sec4-tit{
+    display: flex;
+    align-items: center;
+    margin-bottom: 125.75px;
+}
+
+.sec4-tit h2{
+    font-family: "Inter";
+    font-size: 2.5em;
+    font-weight: 500;
+    color: #333;
+    margin-right: 8px;
+}
+
+.sec4-tit img{
+    width: 52.32px;
+    height: 40.53px;
+    transform: rotate(34deg);
+    box-shadow: 0 4px 4px rgb(51,51,51,0.1);
+}
+
+.swiper-container-4{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
 }
 
 .tiket-box{
-    width: 100%;
+    width: 700px;
+    height: 380px;
     border-radius: 20px 20px 20px 0;
-    box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+    box-shadow: 0 4px 4px rgba(51,51,51,0.15);
+    margin-right: 60px;
 }
 
 .tiket-box .tiket-img{
     width: 100%;
-    height: 400px;
+    height: 300px;
     border-radius: 20px 20px 0 0;
     overflow: hidden;
 }
@@ -815,8 +851,8 @@ header .container .hd-right a:hover{
 }
 
 .tiket-box .tiket-bottom .tiket-info{
-    width: 1195px;
-    height: 150px;
+    width: 500px;
+    height: 80px;
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -826,13 +862,13 @@ header .container .hd-right a:hover{
 
 .tiket-box .tiket-bottom .tiket-info h2{
     font-family: "Noto Sans KR";
-    font-size: 3.375em;
+    font-size: 1.5em;
     font-weight: 300;
     color: #333;
 }
 .tiket-box .tiket-bottom .tiket-info p{
     font-family: "Noto Sans KR";
-    font-size: 2em;
+    font-size: 1.25em;
     font-weight: 300;
     color: #333;
 }
@@ -840,24 +876,40 @@ header .container .hd-right a:hover{
 .tiket-box .tiket-bottom .tiket-arrow{
     width: 0;
     height: 0;
-    border-top: 75px solid transparent;
-    border-right: 91px solid #00CD3C;
-    border-bottom: 75px solid transparent;
+    border-top: 40px solid transparent;
+    border-right: 40px solid #00CD3C;
+    border-bottom: 40px solid transparent;
+}
+.tiket-box .tiket-bottom  .arrow-2{
+    border-top: 40px solid transparent;
+    border-right: 40px solid #BFAFA0;
+    border-bottom: 40px solid transparent;
+}
+.tiket-box .tiket-bottom  .arrow-3{
+    border-top: 40px solid transparent;
+    border-right: 40px solid #36107D;
+    border-bottom: 40px solid transparent;
 }
 
 .tiket-box .tiket-bottom .tiket-btn{
-    width: 405px;
-    height: 150px;
+    width: 228px;
+    height: 80px;
     background-color: #00CD3C;
     border-radius: 0 0 20px 0;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+.tiket-box .tiket-bottom .tiket-btn-2{
+    background-color: #BFAFA0;
+}
+.tiket-box .tiket-bottom .tiket-btn-3{
+    background-color: #36107D;
+}
 
 .tiket-box .tiket-bottom .tiket-btn a{
     font-family: "Noto Sans KR";
-    font-size: 2.75em;
+    font-size: 1.5em;
     font-weight: 300;
     color: #fff;
 }
@@ -870,10 +922,14 @@ header .container .hd-right a:hover{
     position: relative;
 }
 
+.sec5-txt-box{
+    margin-left: 115px;
+}
+
 .sec5-tit h2{
     font-family: "Inter";
     font-size: 2em;
-    font-weight: 300;
+    font-weight: 500;
     color: #333;
     text-align: left;
     margin-bottom: 100px;
@@ -892,7 +948,7 @@ header .container .hd-right a:hover{
     font-weight: 900;
     color: #333;
     text-align: left;
-    margin: 24px 0 36px;
+    margin: 12px 0 24px;
 }
 .sec5-info p{
     font-family: "Inter";
@@ -904,17 +960,23 @@ header .container .hd-right a:hover{
 }
 
 .sec5-btn{
-    width: 298px;
-    height: 94px;
+    width: 200px;
+    height: 63px;
     background-color: #7850F0;
 }
 .sec5-btn a{
     font-family: "Inter";
-    font-size: 2.5em;
+    font-size: 1.5em;
     font-weight: 700;
     color: #fff;
     text-align: center;
-    line-height: 94px;
+    line-height: 63px;
+}
+.sec5-btn:hover{
+    background-color: #f0f0f0;
+}
+.sec5-btn:hover a{
+    color: #7850F0;
 }
 
 .sec5-img{
@@ -932,85 +994,209 @@ header .container .hd-right a:hover{
 /* sec6 */
 
 .sec6 .container{
-    margin-top: 808px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 291px;
+    margin-top: 693px;
     margin-bottom: 322px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.sec6 .container h2{
+    width: 100%;
+    font-family: "Inter";
+    font-size: 2.5em;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 88px;
+}
+
+.windows .windows-img-box{
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.windows .windows-img-box .windows-img1{
+    width: 300px;
+    height: 190.38px;
+}
+.windows .windows-img-box .windows-img2{
+    width: 200px;
+    height: 435.64px;
+}
+.windows .windows-img-box .windows-img3{
+    width: 250px;
+    height: 169.55px;
+    position: absolute;
+    top: 207px;
+    left: 25px;
+}
+
+.windows-txt-box{
+    display: flex;
+    align-items: center;
 }
 
 .mobile .mobile-icon,
-.windows .windows-icon,
+.windows-txt-box .windows-icon,
 .mac .mac-icon{
-    width: 250px;
-    height: 250px;
+    width: 150px;
+    height: 150px;
 }
 
-.mobile p,
-.windows p,
-.mac p{
+.windows-txt-box .windows-download-box p{
     font-family: "Inter";
-    font-size: 2em;
-    font-weight: 300;
+    font-size: 1.75em;
+    font-weight: 500;
     color: #333;
-    margin: 24px 0 46px;
 }
-
-.mobile,.windows,.mac{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.mobile-download-box{
-    display: flex;
-    /* justify-content: center;
-    align-items: center; */
-}
-
-.mobile-download-box .android{
-    margin-right: 21px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.mobile-download-box .appstore,
-.windows .windows-download-box,
-.mac .mac-download-box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.mobile-download-box .android .android-icon,
-.mobile-download-box .appstore .appstore-icon,
-.windows .windows-download-box .download-icon,
-.mac .mac-download-box .download-icon{
-    width: 70px;
-    height: 70px;
-
-    cursor: pointer;
-}
-
-.mobile-download-box .android .android-icon img,
-.mobile-download-box .appstore .appstore-icon img{
-    object-fit: contain;
-}
-
-.mobile-download-box .android a,
-.mobile-download-box .appstore a,
-.windows .windows-download-box a,
-.mac .mac-download-box a{
+.windows-txt-box .windows-download-box a{
     font-family: "Inter";
     font-size: 1em;
     font-weight: 300;
     color: #333;
-    margin: 24px 0 0;
-    text-align: center;
-
+}
+.windows-txt-box .windows-download-box .download-icon{
+    width: 50px;
+    height: 50px;
+    margin-top: 4px;
     cursor: pointer;
 }
+
+.mobile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mobile .mobile-img-box{
+    margin-bottom: 24px;
+}
+
+.mobile .mobile-img-box .phone{
+    width: 200px;
+    height: 400px;
+    background: url(../img/app/mobile-bg.png) center center;
+    background-size: cover;
+    position: relative;
+}
+
+.mobile .mobile-img-box .phone img{
+    width: 150px;
+    height: 268px;
+}
+.mobile .mobile-img-box .phone img.mobile-img1-1{
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    bottom: 50px;
+    left: 25px;
+}
+
+.mobile .mobile-img-box .phone img.mobile-img1{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+.mobile .mobile-img-box .phone img.mobile-img2{
+    position: absolute;
+    top: 32px;
+    left: -85px;
+    z-index: -1;
+    filter: blur(1px);
+}
+.mobile .mobile-img-box .phone img.mobile-img3{
+    position: absolute;
+    top: 32px;
+    right: -85px;
+    z-index: -1;
+    filter: blur(1px);
+}
+
+.mobile-txt-box{
+    display: flex;
+    align-items: center;
+}
+
+.mobile-txt-box .mobile-download-box p{
+    font-family: "Inter";
+    font-size: 1.75em;
+    font-weight: 500;
+    color: #333;
+}
+.mobile-txt-box .mobile-download-box a{
+    font-family: "Inter";
+    font-size: 1em;
+    font-weight: 300;
+    color: #333;
+}
+
+.mobile-txt-box .mobile-download-box .android,
+.mobile-txt-box .mobile-download-box .appstore{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mobile-txt-box .mobile-download-box .mobile-download-icon-box{
+    display: flex;
+    align-items: center;
+    margin-top: 7px;
+}
+
+.mobile-txt-box .mobile-download-box .android{
+    margin-right: 12px;
+}
+
+.mobile-txt-box .mobile-download-box .android .android-icon,
+.mobile-txt-box .mobile-download-box .appstore .appstore-icon{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.mobile-txt-box .mobile-download-box .android .android-icon img,
+.mobile-txt-box .mobile-download-box .appstore .appstore-icon img{
+    object-fit: contain;
+}
+.mobile-txt-box .mobile-download-box .android a,
+.mobile-txt-box .mobile-download-box .appstore a{
+    font-family: "Inter";
+    font-size: 1em;
+    font-weight: 300;
+    color: #333;
+}
+
+.mac .mac-img-box{
+    width: 400px;
+    height: 306.67px;
+    margin-bottom: 117.33px;
+}
+
+.mac-txt-box{
+    display: flex;
+    align-items: center;
+}
+
+.mac-txt-box .mac-download-box p{
+    font-family: "Inter";
+    font-size: 1.75em;
+    font-weight: 500;
+    color: #333;
+}
+.mac-txt-box .mac-download-box a{
+    font-family: "Inter";
+    font-size: 1em;
+    font-weight: 300;
+    color: #333;
+}
+.mac-txt-box .mac-download-box .download-icon{
+    width: 50px;
+    height: 50px;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
 
 /* sec6 끝---------------------- */
 
