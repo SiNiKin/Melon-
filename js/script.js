@@ -2,7 +2,7 @@ $(document).ready(function(){
 
   $('.bxslider').bxSlider({
 
-    slideWidth: 360,
+    slideWidth: 280,
     maxSlides:1,
     moveSlide:1,
     auto: true
@@ -26,12 +26,39 @@ $(document).ready(function(){
 
   var mySwiper2 = new Swiper('.swiper-container-2', {
 
+    direction : 'horizontal',
+    loop: false,
     speed: 1200,
-    grabCursor: true,
-    // centeredSlides: true,
     slidesPerView: "auto",
     controller: {
       control: mySwiper3
+    },
+    // on: {
+    //   transitionStart: function(){
+        
+    //     var videos = document.querySelectorAll('video');
+  
+    //     Array.prototype.forEach.call(videos, function(video){
+    //       video.pause();
+    //     });
+    //   },
+      
+    //   transitionEnd: function(){
+        
+    //     var activeIndex = this.activeIndex;
+    //     var activeSlide = document.getElementsByClassName('swiper-slide')[activeIndex];
+    //     var activeSlideVideo = activeSlide.getElementsByTagName('video')[0];
+    //     activeSlideVideo.play();
+      
+    //   },
+    
+    // }
+
+    on: {
+      activeIndexChange: function () {
+        var videos = document.querySelectorAll('video');  //수정
+        $('video').eq(this.realIndex).video.pause();
+      }
     }
     
   });
@@ -57,6 +84,14 @@ $(document).ready(function(){
     grabCursor: true,
     // centeredSlides: true,
     slidesPerView: "auto",
+    scrollbar: {
+      el: ".swiper-scrollbar",
+      hide: true,
+    },
+    
+  });
+
+  $('.swiper-container-2 .melon-tv').click(function(){
     
   });
 
