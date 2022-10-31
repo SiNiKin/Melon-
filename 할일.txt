@@ -1,8 +1,19 @@
-검색바 클릭할때 글씨 안뜨게
 
 사이드 바 다른 곳 클릭시 닫히게
+//.target
+        //지금 실제로 클릭한 요소
+        //.currentTarget
+        //지금 이벤트 리스너가 달린곳
+        $('.black-background').click(function(e){
+          console.log(e.target);
+          //내가 지금 클릭한 요소가 이벤트 리스너가 달린곳과 같다면 페이드 아웃 시켜줘
+          if( e.target == e.currentTarget){
+            $('.black-background').fadeOut();
+          }
+
 
 영상 스와이퍼 문제 해결 
 
-티켓 스와이프 추가 (화살표 이미지 바꾸거나 스크롤로 바꾸기) 
 
+미디어쿼리 sec6(1270부터) , 푸터, 헤더, 사이드바, 영상
+1000px 이후

@@ -405,12 +405,12 @@ header .container .hd-right a:hover{
     margin-bottom: 240px;
 }
 
-.sec1 .container .chart{
+/* .sec1 .container .chart{
     width: 925px;
-}
+} */
 
 .sec1 .container .chart-hd{
-    width: 925px;
+    width: 100%;
     height: 100px;
     border: 1px solid #00CD3C;
     border-radius: 10px;
@@ -427,7 +427,11 @@ header .container .hd-right a:hover{
     color: #333;
     text-align: center;
 }
+.chart-list{
+    padding: 32px 56px 32px 0;
+}
 .sec1 .swiper-slide{
+    width: 100%;
     height: 160px;
 }
 .sec1 .swiper-wrapper{
@@ -437,7 +441,6 @@ header .container .hd-right a:hover{
     width: 100%;
     height: 768px;
     border-bottom: 1px solid #00CD3C;
-    padding: 32px 56px 32px 0;
     margin-bottom: -32px;
     overflow: hidden;
 }
@@ -493,9 +496,9 @@ header .container .hd-right a:hover{
     color: #5A60FE;
 }
 
-.playlist{
-    width: 492px;
-}
+/* .playlist{
+    margin-left: ;
+} */
 
 .playlist .pli-hd{
     width: 377px;
@@ -581,6 +584,11 @@ header .container .hd-right a:hover{
     margin-bottom: 208px;
 }
 
+/* 수정 */
+.main-magazine{
+    width: 47.238%;
+}
+
 .main-magazine .sec2-green-box{
     width: 600px;
     height: 700px;
@@ -651,34 +659,37 @@ header .container .hd-right a:hover{
 }
 
 .magazine-list{
-    width: 600px;
+    /* width: 600px; */
+    width: 43.604%;
     display: flex;
     flex-wrap: wrap;
-    margin-left: 127px;
+    margin-left: 9%;
+    margin-top: 50px;
 }
 
 .magazine-list .magazin-li{
     box-sizing: border-box;
+    width: 50%;
 }
-.magazine-list .magazin-li:first-of-type{
+/* .magazine-list .magazin-li:first-of-type{
     margin-right: 39px;
-}
+} */
 
-.magazine-list .magazin-li:nth-of-type(2){
+/* .magazine-list .magazin-li:nth-of-type(2){
     padding-left: 39px;
     border-left: 1px solid #D9D9D9;
-}
-.magazine-list .magazin-li:nth-of-type(3){
+} */
+/* .magazine-list .magazin-li:nth-of-type(3){
     padding-right: 39px;
     border-right: 1px solid #D9D9D9;
     border-top: 1px solid #D9D9D9;
     padding-top: 28px;
-}
-.magazine-list .magazin-li:nth-of-type(4){
-    padding-left: 39px;
+} */
+/* .magazine-list .magazin-li:nth-of-type(4){
+    margin-left: 39px;
     padding-top: 28px;
     border-top: 1px solid #D9D9D9;
-}
+} */
 
 .magazine-list .magazin-li .magazine-li-img{
     width: 250px;
@@ -1286,7 +1297,8 @@ header .container .hd-right a:hover{
 /* 미디어쿼리 */
 
 @media (max-width:1770px){
-    .container{
+    .container,
+    .sec2 .container{
         padding: 0 120px;
     }
 
@@ -1303,6 +1315,20 @@ header .container .hd-right a:hover{
 
     .main .container .main-bottom .main-bottom-left{
         width: 775px;
+    }
+
+    .sec5-txt-box{
+        margin: 0;
+    }
+
+    .sec5-img{
+        width: 1000px;
+        height: 688.21px;
+        left: 600px;
+    }
+
+    .sec6 .container{
+        margin-top: 600px;
     }
 
 }
@@ -1334,16 +1360,206 @@ header .container .hd-right a:hover{
     .main .container .main-bottom .main-bottom-right .bottom-ad-box img{
         object-fit: contain;
     }
+
+    .ch-music .album-img{
+        width: 130px;
+        height: 130px;
+    }
+
+    .album-info-box{
+        width: 600px;
+    }
+
+    .ch-music .album-info-box .album-info a.info{
+        font-size: 1.5em;
+    }
+
+    .ch-music .album-info-box .album-info p{
+        font-size: 1.2em;
+    }
+
+    .ch-music .album-info-box .album-info p:last-of-type{
+        margin-top: 16px;
+    }
+
+    .ch-music .album-info-box .rank{
+        font-size: 1.5em;
+    }
+
+    .playlist .pli-list .p-list{
+        margin: 60px 0;
+    }
+
+    .playlist .pli-list .p-list .p-list-green-box,
+    .playlist .pli-list .p-list .p-list-green-box .p-list-img{
+        width: 120px;
+        height: 120px;
+    }
+
+    .sec1 .container .chart-hd h1, .sec1 .container .chart-hd a{
+        font-size: 1.5em;
+    }
+
+    .chart-list{
+        padding: 32px 8px;
+    }
+
+    .playlist{
+        margin-left: 100px;
+    }
+
+    .playlist .pli-hd h1{
+        font-size: 1.5em;
+    }
+
+    .main-magazine{
+        width: 43.238%;
+    }
+
+    .main-magazine .sec2-green-box,
+    .main-magazine .sec2-green-box .magazine-box{
+        width: 500px;
+        height: 600px;
+    }
+
+    .main-magazine .sec2-green-box .magazine-box h1{
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+
+    .main-magazine .sec2-green-box .magazine-box .main-magazine-img{
+        width: 350px;
+        height: 254.66px;
+    }
+
+    .main-magazine-info-box{
+        width: 350px;
+    }
+
+    .main-magazine-info-box p.main-magazine-tit{
+        font-size: 1.1em;
+        margin: 12px 0;
+    }
+
+    .main-magazine-info-box p.main-magazine-info{
+        font-size: 1em;
+        margin-bottom: 12px;
+    }
+
+    .magazine-list{
+        width: 43%;
+        margin-left: 5%;
+    }
+
+    .magazine-list .magazin-li .magazine-li-img{
+        width: 230px;
+        height: 167.34px;
+    }
+
+    .magazine-list .magazin-li .magazine-li-info-box{
+        width: 240px;
+    }
+
+    .sec5-img{
+        width: 800px;
+        height: 550.57px;
+    }
+
+    .sec6 .container{
+        margin-top: 500px;
+    }
+
+    .windows .windows-img-box{
+        width: 400px;
+        margin-bottom: 14px;
+    }
+    .windows .windows-img-box .windows-img1{
+        width: 250px;
+        height: 158.65px;
+    }
+    .windows .windows-img-box .windows-img2{
+        width: 150px;
+        height: 326.73px;
+    }
+    .windows .windows-img-box .windows-img3{
+        width: 200px;
+        height: 169.55px;
+        top: 150px;
+        left: 25px;
+    }
+
+    .mobile .mobile-img-box{
+        margin-bottom: 0;
+    }
+    .mobile .mobile-img-box .phone{
+        width: 170px;
+        height: 340px;
+    }
+    .mobile .mobile-img-box .phone img.mobile-img{
+        top: 25px;
+        left: 15px;
+    }
+    .mobile .mobile-img-box .phone img.mobile-img1-1{
+        width: 150px;
+        height: 40px;
+        left: 15px;
+    }
+    .mobile .mobile-img-box .phone img{
+        width: 120px;
+        height: 214.4px;
+        object-fit: contain;
+    }
+
+    .mac .mac-img-box{
+        width: 350px;
+        height: 268.34px;
+        margin-bottom: 72px;
+    }
 }
 
 @media (max-width:1400px){
-    .container{
+    .container,
+    .sec2 .container{
         padding: 0 60px;
+    }
+    .playlist{
+        margin-left: 50px;
+    }
+
+    .sec5-tit h2{
+        margin-bottom: 80px;
+    }
+
+    .sec5-info h2{
+        font-size: 2em;
+    }
+
+    .sec5-info h1{
+        font-size: 4.5em;
+    }
+
+    .sec5-info p{
+        margin-bottom: 32px;
+    }
+
+    .sec5-btn{
+        width: 170px;
+        height: 60px;
+    }
+
+    .sec5-btn a{
+        line-height: 60px;
+    }
+
+    .sec5-img{
+        top: 270px;
+        left: 460px;
     }
 }
 
 @media (max-width:1270px){
-    .container{
+    .container,
+    .sec2 .container{
         padding: 0 32px;
     }
 
@@ -1375,6 +1591,20 @@ header .container .hd-right a:hover{
         font-size: 1.5em;
     }
 
+    .album-info-box{
+        width: 400px;
+    }
+
+    .ch-music .album-info-box .album-info a.info{
+        font-size: 1.25em;
+    }
+    .ch-music .album-info-box .album-info p{
+        font-size: 1em;
+    }
+
+    .sec5-img{
+        left: 400px;
+    }
 
 }
 
@@ -1403,6 +1633,78 @@ header .container .hd-right a:hover{
         width: 300px;
         height: 150px;
     }
+
+    .main-magazine{
+        width: auto;
+        margin: 0 auto;
+    }
+
+    .main-magazine .sec2-green-box, 
+    .main-magazine .sec2-green-box .magazine-box{
+        width: 600px;
+        height: 700px;
+    }
+
+    .main-magazine .sec2-green-box .magazine-box h1{
+        font-size: 3.25em;
+        margin-bottom: 28px;
+    }
+
+    .main-magazine .sec2-green-box .magazine-box .main-magazine-img{
+        width: 400px;
+        height: 291.03px;
+    }
+
+    .main-magazine-info-box{
+        width: 400px;
+    }
+
+    .main-magazine-info-box p.main-magazine-tit{
+        font-size: 1.25em;
+    }
+
+    .main-magazine-info-box p.main-magazine-info{
+        margin-bottom: 20px;
+    }
+
+    .magazine-list{
+        display: none;
+    }
+
+    /* 텍스트 박스 정리 */
+    
+    .sec5-tit h2{
+        margin-bottom: 40px;
+    }
+
+    .sec5-info h2{
+        font-size: 1.75em;
+    }
+
+    .sec5-info h1{
+        font-size: 4em;
+        margin: 12px 0 16px;
+    }
+
+    .sec5-info p{
+        margin-bottom: 20px;
+    }
+
+    .sec5-btn{
+        width: 150px;
+        height: 50px;
+    }
+
+    .sec5-btn a{
+        line-height: 50px;
+        font-size: 1.2em;
+    }
+
+    .sec5-img{
+        width: 600px;
+        height: 412.93px;
+    }
+
 }
 
 @media (max-width:1000px){
@@ -1463,5 +1765,63 @@ header .container .hd-right a:hover{
         line-height: 60px;
         font-size: 1.25em;
     }
+
+    .sec1 .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .chart{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .ch-music .album-img{
+        width: 150px;
+        height: 150px;
+    }
+
+    .album-info-box{
+        width: 80%;
+    }
+
+    .playlist{
+        margin: 0;
+        width: 80%;
+    }
+
+    .playlist .pli-hd{
+        width: 80%;
+    }
+
+    .playlist .pli-list{
+        padding: 0 0 0 100px;
+    }
+
+    .playlist .pli-list .p-list .p-list-green-box, .playlist .pli-list .p-list .p-list-green-box .p-list-img{
+        width: 139.97px;
+        height: 139.97px;
+    }
+
+    .sec5 .container{
+        position: static;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .sec5-img{
+        position: static;
+        margin: -50px auto 0;
+        width: 800px;
+        height: 550.57px;
+    }
+
+    .sec6 .container{
+        margin-top: 150px;
+    }
+
 
 }
