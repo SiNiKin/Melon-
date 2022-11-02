@@ -64,6 +64,16 @@ header .container .hd-right a:hover{
     position: fixed;
     top: 536px;
     right: 15px;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.side-bar:hover{
+    opacity: 0.8;
+}
+
+.side-bar.active{
+    opacity: 1;
 }
 
 .side-bar-menu{
@@ -155,7 +165,7 @@ header .container .hd-right a:hover{
     cursor: pointer;
 }
 .main .container .main-top .main-top-left .logo-box img{
-    object-position: 0 -27px;
+    object-fit: contain;
 }
 
 .main .container .main-top .main-top-left .search{
@@ -740,66 +750,110 @@ header .container .hd-right a:hover{
 
 .sec3 .container{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 331px;
+    padding: 0 260px;
     margin-bottom: 296px;
 }
 
-.swiper-container-3{
-    width: 400px;
+.sec3-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 52px;
+}
+
+.sec3-top .sec3-top-left{
+    width: 650px;
+    height: 513.35px;
+    background-image: url(../img/tv/Group\ 57.png);
+    background-size: cover;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sec3-top .sec3-top-left video{
+    width: 540px;
+    height: 394px;
+    border-radius: 70px;
+    overflow: hidden;
+    transition: 0.3s;
+    cursor: pointer;
+    margin-top: 34px;
+    display: none;
+}
+.sec3-top .sec3-top-left video.active{
+    display: block;
 }
 
-.melon-tv-info{
-    width: 400px;
-    text-align: right;
+.sec3-top-right{
+    margin-left: 160px;
 }
 
-.melon-tv-info h1{
+.sec3-top-txt{
+    display: none;
+}
+.sec3-top-txt.active{
+    display: block;
+}
+.sec3-top-txt h1{
     font-family: "Noto Sans KR";
     font-size: 2.25em;
     font-weight: 700;
     color: #333;
     margin-bottom: 54px;
 }
-.melon-tv-info h2{
+.sec3-top-txt h2{
     font-family: "Noto Sans KR";
     font-size: 1.75em;
     font-weight: 500;
     color: #333;
     margin-bottom: 21px;
 }
-.melon-tv-info p:first-of-type{
+.sec3-top-txt p{
     font-family: "Noto Sans KR";
-    font-size: 1.25em;
     font-weight: 300;
     color: #333;
+}
+.sec3-top-txt p:first-of-type{
+    font-size: 1.25em;
     margin-bottom: 10px;
 }
-.melon-tv-info p:last-of-type{
-    font-family: "Noto Sans KR";
+.sec3-top-txt p:last-of-type{
     font-size: 1em;
-    font-weight: 300;
-    color: #333;
 }
 
 .swiper-container-2{
-    width: 650px;
-    height: 513.35px;
-    background: url(../img/tv/Group\ 57.png) center top;
-    background-size: cover;
+    width: 100%;
+    border-radius: 50px;
+    border-top: 2px solid #00cd3c;
+    border-bottom: 2px solid #00cd3c;
     overflow: hidden;
-    padding-left: 55px;
+    padding: 20px;
+    padding-left: 51px;
 }
-
 .swiper-container-2>.swiper-wrapper{
+    width: 1360px;
     display: flex;
     align-items: center;
-    margin-top: 16px;
+}
+.swiper-container-2 .melon-tv{
+    width: 150px;
+    height: 109.44px;
+    border-radius: 30px;
+    overflow: hidden;
+    opacity: 0.6;
+    margin-right: 16px;
+    cursor: pointer;
 }
 
-.swiper-container-2 .melon-tv{
+.swiper-container-2 .melon-tv:hover{
+    opacity: 1;
+}
+
+/* .swiper-container-2 .melon-tv{
     width: 540px;
     height: 394px;
     border-radius: 70px;
@@ -808,7 +862,7 @@ header .container .hd-right a:hover{
     opacity: 0.8;
     transition: 0.3s;
     cursor: pointer;
-}
+} */
 
 /* .swiper-slide-active{
     opacity: 1;
@@ -1030,7 +1084,6 @@ header .container .hd-right a:hover{
 }
 
 .windows .windows-img-box{
-    width: 500px;
     display: flex;
     flex-wrap: wrap;
     position: relative;
@@ -1251,12 +1304,15 @@ header .container .hd-right a:hover{
 
 .ft-bottom{
     border-top: 2px solid rgb(51,51,51,0.5);
-    padding: 40px 0 68px 295px;
+    padding: 40px 160px 40px 295px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .ft-bottom .ft-bottom-a{
     display: flex;
-    margin-bottom: 63px;
+    margin-bottom: 32px;
 }
 .ft-bottom .ft-bottom-a a{
     font-family: "Noto Sans KR";
@@ -1331,9 +1387,32 @@ header .container .hd-right a:hover{
         margin-top: 600px;
     }
 
+    .sec3 .container{
+        padding: 0 220px;
+    }
+
 }
 
 @media (max-width:1550px){
+    header .container .hd-left a,
+    header .container .hd-right a{
+        font-size: 1.2em;
+    }
+
+    .side-logo{
+        width: 100px;
+        height: 100px;
+    }
+    .side-bar-menu{
+        width: 100px;
+    }
+    .side-bar-menu.active{
+        height: 350px;
+    }
+    .side-bar-menu a{
+        font-size: 0.9em;
+    }
+
     .main .container .main-bottom .main-bottom-right .login-box{
         width: 350px;
         height: 200px;
@@ -1460,6 +1539,32 @@ header .container .hd-right a:hover{
         width: 240px;
     }
 
+    .sec3-top .sec3-top-left{
+        width: 500px;
+        height: 394.88px;
+    }
+
+    .sec3-top .sec3-top-left video{
+        width: 400px;
+        height: 291.85px;
+    }
+
+    .sec3-top-right{
+        margin-left: 120px;
+    }
+
+    .sec3-top-txt h1{
+        font-size: 2em;
+    }
+
+    .sec3-top-txt h2{
+        font-size: 1.5em;
+    }
+
+    .sec3-bottom{
+        width: 100%;
+    }
+
     .sec5-img{
         width: 800px;
         height: 550.57px;
@@ -1469,8 +1574,12 @@ header .container .hd-right a:hover{
         margin-top: 500px;
     }
 
+    .mobile .mobile-icon, .windows-txt-box .windows-icon, .mac .mac-icon{
+        width: 130px;
+        height: 130px;
+    }
+
     .windows .windows-img-box{
-        width: 400px;
         margin-bottom: 14px;
     }
     .windows .windows-img-box .windows-img1{
@@ -1487,6 +1596,13 @@ header .container .hd-right a:hover{
         top: 150px;
         left: 25px;
     }
+    .windows-txt-box .windows-download-box p{
+        font-size: 1.5em;
+    }
+    .windows-txt-box .windows-download-box .download-icon{
+        width: 30px;
+        height: 30px;
+    }
 
     .mobile .mobile-img-box{
         margin-bottom: 0;
@@ -1495,7 +1611,7 @@ header .container .hd-right a:hover{
         width: 170px;
         height: 340px;
     }
-    .mobile .mobile-img-box .phone img.mobile-img{
+    .mobile .mobile-img-box .phone img.mobile-img1{
         top: 25px;
         left: 15px;
     }
@@ -1509,12 +1625,32 @@ header .container .hd-right a:hover{
         height: 214.4px;
         object-fit: contain;
     }
+    .mobile-txt-box .mobile-download-box p{
+        font-size: 1.5em;
+    }
+    .mobile-txt-box .mobile-download-box .android .android-icon, 
+    .mobile-txt-box .mobile-download-box .appstore .appstore-icon{
+        width: 30px;
+        height: 30px;
+    }
 
     .mac .mac-img-box{
         width: 350px;
         height: 268.34px;
         margin-bottom: 72px;
     }
+    .mac-txt-box .mac-download-box p{
+        font-size: 1.5em;
+    }
+    .mac-txt-box .mac-download-box .download-icon{
+        width: 30px;
+        height: 30px;
+    }
+
+    .ft-bottom{
+        padding: 40px 160px;
+    }
+
 }
 
 @media (max-width:1400px){
@@ -1524,6 +1660,28 @@ header .container .hd-right a:hover{
     }
     .playlist{
         margin-left: 50px;
+    }
+
+    .swiper-container-2 .melon-tv{
+        width: 120px;
+        height: 87.56px;
+    }
+
+    .sec3 .container{
+        padding: 0 100px;
+    }
+
+    .sec3-top-right{
+        margin-left: 80px;
+    }
+
+    .sec3-top-txt h1{
+        font-size: 1.75em;
+        margin-bottom: 20px;
+    }
+
+    .sec3-top-txt h2{
+        font-size: 1.3em;
     }
 
     .sec5-tit h2{
@@ -1555,6 +1713,8 @@ header .container .hd-right a:hover{
         top: 270px;
         left: 460px;
     }
+
+
 }
 
 @media (max-width:1270px){
@@ -1604,6 +1764,15 @@ header .container .hd-right a:hover{
 
     .sec5-img{
         left: 400px;
+    }
+
+    .ft-top{
+        margin: 0 100px;
+        padding: 38px 0;
+    }
+
+    .ft-bottom{
+        padding: 40px 80px;
     }
 
 }
@@ -1670,8 +1839,6 @@ header .container .hd-right a:hover{
     .magazine-list{
         display: none;
     }
-
-    /* 텍스트 박스 정리 */
     
     .sec5-tit h2{
         margin-bottom: 40px;
@@ -1705,11 +1872,87 @@ header .container .hd-right a:hover{
         height: 412.93px;
     }
 
+    .sec6 .container{
+        justify-content: space-around;
+    }
+
+    .sec6 .container h2{
+        font-size: 2em;
+    }
+
+    .windows .windows-img-box{
+        margin-bottom: 62px;
+    }
+    .windows .windows-img-box .windows-img1{
+        width: 200px;
+        height: 126.92px;
+    }
+    .windows .windows-img-box .windows-img2{
+        width: 110px;
+        height: 239.6px;
+    }
+    .windows .windows-img-box .windows-img3{
+        width: 150px;
+        height: 127.16px;
+        top: 120px;
+        left: 25px;
+    }
+
+    .mobile .mobile-img-box .phone{
+        width: 150px;
+        height: 300px;
+    }
+    .mobile .mobile-img-box .phone img{
+        width: 100px;
+        height: 178.67px;
+    }
+    .mobile .mobile-img-box .phone img.mobile-img1-1{
+        width: 100px;
+        height: 33.33px;
+        left: 25px;
+        bottom: 60px;
+    }
+
+    .mac{
+        width: 85%;
+        margin-top: 40px;
+    }
+    .mac .mac-img-box{
+        width: 300px;
+        height: 230px;
+    }
+
+    .ft-top{
+        margin: 0 40px;
+    }
+
+    .ft-bottom{
+        padding: 40px 40px;
+    }
+
 }
 
 @media (max-width:1000px){
     .container{
         padding: 0 16px;
+    }
+
+    header{
+        display: none;
+    }
+
+    .side-bar{
+        display: none;
+    }
+
+    .main .container .main-top .main-top-left .logo-box{
+        width: 180px;
+        height: 76.06px;
+    }
+
+    .main .container .main-top .main-top-left .search,
+    .main .container .main-top .main-top-right{
+        display: none;
     }
 
     .main .container .main-bottom{
@@ -1804,6 +2047,10 @@ header .container .hd-right a:hover{
         height: 139.97px;
     }
 
+    .sec3 .container{
+        padding: 0 32px;
+    }
+
     .sec5 .container{
         position: static;
         display: flex;
@@ -1821,7 +2068,789 @@ header .container .hd-right a:hover{
 
     .sec6 .container{
         margin-top: 150px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
+    .windows{
+        margin-bottom: 80px;
+    }
+    .windows .windows-img-box .windows-img1{
+        width: 300px;
+        height: 190.38px;
+    }
+    .windows .windows-img-box .windows-img2{
+        width: 200px;
+        height: 435.64px;
+    }
+    .windows .windows-img-box .windows-img3{
+        width: 250px;
+        height: 169.55px;
+        top: 207px;
+        left: 25px;
+    }
+    .mobile .mobile-icon, .windows-txt-box .windows-icon, .mac .mac-icon{
+        width: 150px;
+        height: 150px;
+    }
+    .windows-txt-box .windows-download-box p{
+        font-size: 1.75em;
+    }
+    .windows-txt-box .windows-download-box .download-icon{
+        width: 50px;
+        height: 50px;
+    }
+
+    .mobile{
+        margin-bottom: 80px;
+    }
+    .mobile .mobile-img-box .phone{
+        width: 200px;
+        height: 400px;
+    }
+    .mobile .mobile-img-box .phone img{
+        width: 150px;
+        height: 268px;
+    }
+    .mobile .mobile-img-box .phone img.mobile-img1-1{
+        width: 150px;
+        height: 50px;
+        bottom: 50px;
+        left: 25px;
+    }
+    .mobile-txt-box .mobile-download-box p{
+        font-size: 1.75em;
+    }
+    .mobile-txt-box .mobile-download-box .android .android-icon, .mobile-txt-box .mobile-download-box .appstore .appstore-icon{
+        width: 50px;
+        height: 50px;
+    }
+
+    .mac{
+        width: auto;
+        margin: 0;   
+    }
+    .mac .mac-img-box{
+        width: 400px;
+        height: 306.67px;
+        margin: 72px;
+    }
+    .mac-txt-box .mac-download-box .download-icon{
+        width: 50px;
+        height: 50px;
+    }
+
+    .ft-top{
+        margin: 0 40px;
+    }
+
+    .ft-bottom{
+        padding: 40px 16px;
+    }
+
+    .ft-bottom .ft-bottom-a a{
+        font-size: 0.9em;
+    }
+
+    .ft-bottom .ft-bottom-a a:after{
+        height: 15px;
+    }
+
+    .ft-bottom .ft-bottom-info p{
+        font-size: 0.9em;
+    }
+
+}
+
+@media (max-width:890px){
+    .new-album-box .new-album{
+        width: 154px;
+        height: 154px;
+    }
+
+    .main-new-album-box .main-green-box, 
+    .main-new-album-box .main-green-box .main-new-album{
+        width: 270px;
+        height: 270px;
+    }
+
+    .main-new-album-box .main-green-box .main-new-album span a{
+        font-size: 1.5em;
+    }
+
+    .playlist{
+        width: 100%;
+    }
+
+    .sec3-top .sec3-top-left{
+        width: 400px;
+        height: 315.91px;
+    }
+
+    .sec3-top .sec3-top-left video{
+        width: 330px;
+        height: 240.78px;
+    }
+
+    .sec3-top-right{
+        margin-left: 40px;
+    }
+
+    .sec3-top-txt h1{
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+
+    .sec3-top-txt h2{
+        font-size: 1.2em;
+        margin-bottom: 8px;
+    }
+
+    .sec3-top-txt p:first-of-type{
+        font-size: 1em;
+        margin-bottom: 10px;
+    }
+
+    .sec3-top-txt p:last-of-type{
+        font-size: 0.8em;
+    }
+
+    .swiper-container-2{
+        padding: 12px;
+        padding-left: 40px;
+    }
+
+    .swiper-container-2 .melon-tv{
+        width: 100px;
+        height: 72.96px;
+        border-radius: 20px;
+    }
+
+    .sec4-tit h2{
+        font-size: 2em;
+    }
+
+    .sec4-tit img{
+        width: 40px;
+        height: 30.99px;
+    }
+
+    .tiket-box{
+        width: 500px;
+    }
+
+    .tiket-box .tiket-bottom .tiket-info{
+        width: 100%;
+    }
+
+    .tiket-box .tiket-bottom .tiket-info h2{
+        font-size: 1.2em;
+    }
+
+    .tiket-box .tiket-bottom .tiket-info p{
+        font-size: 1em;
+    }
+
+    .sec5-img{
+        width: 600px;
+        height: 412.93px;
+    }
+
+}
+
+@media (max-width:837px){
+    .ft-bottom .ft-bottom-a a:after{
+        height: 40px;
+    }
+}
+
+@media (max-width:720px){
+    .new-album-box .new-album{
+        width: 130px;
+        height: 130px;
+    }
+
+    .main-new-album-box .main-green-box, 
+    .main-new-album-box .main-green-box .main-new-album{
+        width: 200px;
+        height: 200px;
+    }
+
+    .main-new-album-box .main-green-box .main-new-album span a{
+        font-size: 1em;
+    }
+
+    .main-new-album-box .main-green-box .main-new-album span p,
+    .new-album-box .new-album span a{
+        font-size: 0.8em;
+    }
+
+    .new-album-box .new-album span p{
+        font-size: 0.5em;
+    }
+
+    .playlist .pli-hd h1{
+        font-size: 1.2em;
+    }
+
+    .playlist .pli-hd a{
+        font-size: 1em;
+    }
+
+    .playlist .pli-list .p-list .p-list-green-box, 
+    .playlist .pli-list .p-list .p-list-green-box .p-list-img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .playlist .pli-list .p-list .p-list-info a{
+        font-size: 1em;
+    }
+
+    .playlist .pli-list .p-list .p-list-info p{
+        font-size: 0.8em;
+    }
+
+    .main-magazine .sec2-green-box, 
+    .main-magazine .sec2-green-box .magazine-box{
+        width: 400px;
+        height: 466.67px;
+    }
+
+    .main-magazine .sec2-green-box .magazine-box h1{
+        font-size: 1.8em;
+        margin-bottom: 0;
+    }
+
+    .main-magazine .sec2-green-box .magazine-box .main-magazine-img{
+        width: 300px;
+        height: 218.28px;
+    }
+
+    .main-magazine-info-box{
+        width: 300px;
+    }
+
+    .main-magazine-info-box p.main-magazine-tit{
+        font-size: 1em;
+        margin: 4px 0;
+    }
+
+    .main-magazine-info-box p.main-magazine-info{
+        font-size: 0.8em;
+        margin-bottom: 4px;
+    }
+
+    .main-magazine-info-box p.main-magazine-like{
+        font-size: 0.7em;
+    }
+
+    .sec3-top-txt.active{
+        display: none;
+    }
+
+    .sec5-info h2{
+        font-size: 1.5em;
+    }
+
+    .sec5-info h1{
+        font-size: 3em;
+    }
+
+    .sec5-btn{
+        width: 120px;
+    }
+
+    .sec5-btn a{
+        font-size: 1.1em;
+    }
+
+}
+
+@media (max-width:610px){
+    .new-album-box{
+        margin-top: 50px;
+    }
+
+    .new-album-box .new-album{
+        width: 100px;
+        height: 100px;
+    }
+
+    .main-new-album-box .main-green-box .main-new-album span a{
+        font-size: 0.8em;
+    }
+
+    .main-new-album-box .main-green-box .main-new-album span p,
+    .new-album-box .new-album span a{
+        font-size: 0.5em;
+    }
+
+    .new-album-box .new-album span p{
+        font-size: 0.5em;
+    }
+
+    .playlist .pli-list{
+        padding: 0 0 0 60px;
+    }
+
+    .tiket-box{
+        width: 400px;
+    }
+
+    .tiket-box .tiket-img{
+        height: 200px;
+    }
+
+    .tiket-box .tiket-bottom .tiket-info h2{
+        font-size: 1em;
+    }
+
+    .tiket-box .tiket-bottom .tiket-info p{
+        font-size: 0.8em;
+    }
+
+    .tiket-box .tiket-bottom .tiket-btn a{
+        font-size: 1.1em;
+    }
+
+    .sec5-img{
+        width: 500px;
+        height: 344.1px;
+        margin: 0;
+    }
+
+}
+
+@media (max-width:550px){
+    .new-album-box .new-album{
+        width: 80px;
+        height: 80px;
+    }
+
+    .main-new-album-box .main-green-box, 
+    .main-new-album-box .main-green-box .main-new-album{
+        width: 180px;
+        height: 180px;
+    }
+
+    .main .container .main-bottom .main-bottom-right .login-box, .main .container .main-bottom .main-bottom-right .bottom-ad-box{
+        width: 90%;
+    }
+
+    .sec1 .container .chart-hd h1, .sec1 .container .chart-hd a{
+        font-size: 1.2em;
+    }
+
+    .ch-music{
+        margin-bottom: 0;
+    }
+
+    .ch-music .album-img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .ch-music .album-info-box .album-info a.info{
+        font-size: 1em;
+    }
+
+    .ch-music .album-info-box .album-info p{
+        font-size: 0.8em;
+    }
+
+    .ch-music .album-info-box .rank{
+        font-size: 1em;
+    }
+
+    .playlist .pli-list{
+        padding: 0;
+    }
+
+    .main-magazine .sec2-green-box .magazine-box{
+        transform: translate(20px,17px);
+    }
+
+    .sec3-top{
+        margin-left: 30px;
+    }
+
+    .sec5-img{
+        width: 450px;
+        height: 309.69px;
+    }
+
+    .windows .windows-img-box .windows-img1{
+        width: 200px;
+        height: 126.92px;
+    }
+    .windows .windows-img-box .windows-img2{
+        width: 110px;
+        height: 239.6px;
+    }
+    .windows .windows-img-box .windows-img3{
+        width: 150px;
+        height: 127.16px;
+        top: 125px;
+        left: 25px;
+    }
+
+    .mobile .mobile-icon, .windows-txt-box .windows-icon, .mac .mac-icon{
+        width: 100px;
+        height: 100px;
+    }
+
+    .windows-txt-box .windows-download-box p,
+    .mobile-txt-box .mobile-download-box p,
+    .mac-txt-box .mac-download-box p{
+        font-size: 1.5em;
+    }
+
+    .windows-txt-box .windows-download-box .download-icon,
+    .mac-txt-box .mac-download-box .download-icon{
+        width: 30px;
+        height: 30px;
+    }
+
+    .mobile .mobile-img-box .phone{
+        width: 150px;
+        height: 300px;
+    }
+    .mobile .mobile-img-box .phone img{
+        width: 100px;
+        height: 178.67px;
+    }
+    .mobile .mobile-img-box .phone img.mobile-img1-1{
+        width: 100px;
+        height: 33.33px;
+        left: 25px;
+        bottom: 50px;
+    }
+    .mobile-txt-box .mobile-download-box .android .android-icon, 
+    .mobile-txt-box .mobile-download-box .appstore .appstore-icon{
+        width: 30px;
+        height: 30px;
+    }
+    .mobile-txt-box .mobile-download-box .android a, 
+    .mobile-txt-box .mobile-download-box .appstore a{
+        font-size: 0.8em;
+    }
+
+    .mac .mac-img-box{
+        width: 300px;
+        height: 230px;
+        margin: 0;
+    }
+
+    .windows .windows-img-box,
+    .mobile .mobile-img-box,
+    .mac .mac-img-box{
+        margin-bottom: 62px;
+    }
+
+    .ft-top a{
+        font-size: 0.9em;
+        margin-right: 40px;
+    }
+
+    .ft-top p{
+        margin-right: 16px;
+    }
+
+    .ft-bottom .ft-bottom-a{
+        display: none;
+    }
+
+}
+
+@media (max-width:465px){
+    .container, .sec2 .container{
+        padding: 0 16px;
+    }
+
+    .main .container .main-bottom{
+        padding-top: 48px;
+    }
+
+    .main-new-album-box{
+        margin-right: 50px;
+    }
+
+    .main-new-album-box h2{
+        font-size: 1em;
+        margin-bottom: 11px;
+    }
+
+    .main-new-album-box .main-green-box, 
+    .main-new-album-box .main-green-box .main-new-album{
+        width: 150px;
+        height: 150px;
+    }
+
+    .new-album-box{
+        margin-top: 94px;
+    }
+
+    .new-album-box .new-album{
+        width: 50px;
+        height: 50px;
+        margin-right: 8px;
+        margin-bottom: 8px;
+    }
+
+    .new-album-box .new-album span{
+        display: none;
+    }
+
+    .main .container .main-bottom .main-bottom-right .login-box, 
+    .main .container .main-bottom .main-bottom-right .bottom-ad-box{
+        width: 300px;
+        height: 139.2px;
+    }
+
+    .main .container .main-bottom .main-bottom-right .login-box p{
+        font-size: 1em;
+        margin: 40px auto 20px;
+    }
+
+    .main .container .main-bottom .main-bottom-right .login-box .login-btn{
+        width: 200px;
+        height: 40px;
+    }
+
+    .main .container .main-bottom .main-bottom-right .login-box{
+        margin-bottom: 20px;
+    }
+
+    .main .container .main-bottom .main-bottom-right .login-box .login-btn a{
+        font-size: 0.875em;
+        line-height: 40px;
+    }
+
+    .main .container .main-bottom .main-bottom-right .bottom-ad-box{
+        margin-bottom: 40px;
+    }
+
+    .sec1 .container{
+        margin-bottom: 72px;
+    }
+
+    .sec1 .container .chart-hd{
+        height: 80px;
+    }
+
+    .sec1 .container .chart-hd h1, .sec1 .container .chart-hd a{
+        font-size: 1em;
+    }
+
+    .sec2 .container{
+        margin-bottom: 100px;
+    }
+
+    .chart-list{
+        padding: 0;
+    }
+
+    .chart-list .swiper-container{
+        height: auto;
+        margin: 0;
+        padding-bottom: 20px;
+    }
+
+    .sec1 .swiper-slide{
+        height: 80px;
+    }
+
+    .ch-music .album-img{
+        width: 70px;
+        height: 70px;
+    }
+
+    .ch-music .album-info-box .album-info a.info{
+        font-size: 1em;
+    }
+
+    .ch-music .album-info-box .album-info .album-info-dum{
+        display: none;
+    }
+
+    .ch-music .album-info-box .album-info p:last-of-type{
+        margin-top: 4px;
+        font-size: 0.75em;
+    }
+
+    .main-magazine .sec2-green-box, 
+    .main-magazine .sec2-green-box .magazine-box{
+        width: 250px;
+        height: 291.67px;
+    }
+
+    .main-magazine .sec2-green-box .magazine-box h1{
+        font-size: 1em;
+        margin-bottom: 8px;
+    }
+
+    .main-magazine .sec2-green-box .magazine-box .main-magazine-img{
+        width: 170px;
+        height: 123.69px;
+    }
+
+    .main-magazine-info-box{
+        width: 190px;
+    }
+
+    .main-magazine-info-box p.main-magazine-tit{
+        font-size: 0.625em;
+        margin: 4px 0;
+    }
+
+    .main-magazine-info-box p.main-magazine-info{
+        font-size: 0.5em;
+        margin-bottom: 8px;
+    }
+
+    .main-magazine-info-box p.main-magazine-like{
+        font-size: 0.5em;
+    }
+
+    .sec3 .container{
+        margin-bottom: 80px;
+    }
+
+    .sec3-top .sec3-top-left{
+        width: 300px;
+        height: 236.93px;
+    }
+
+    .sec3-top .sec3-top-left video{
+        width: 250px;
+        height: 182.41px;
+        margin-top: 18px;
+        border-radius: 50px;
+    }
+
+    .swiper-container-2{
+        padding: 8px;
+        padding-left: 8px;
+    }
+
+    .swiper-container-2>.swiper-wrapper{
+        width: auto;
+    }
+
+    .swiper-container-2 .melon-tv{
+        width: 70px;
+        height: 51.07px;
+    }
+
+    .sec4 .container{
+        margin-bottom: 104px;
+    }
+
+    .sec4-tit{
+        margin-bottom: 20px;
+    }
+
+    .sec4-tit h2{
+        font-size: 1.5em;
+    }
+
+    .sec4-tit img{
+        width: 30px;
+        height: 23.24px;
+    }
+
+    .tiket-box{
+        width: 300px;
+        margin: 20px 16px;
+    }
+
+    .tiket-box .tiket-img{
+        height: 150px;
+    }
+
+    .tiket-box .tiket-bottom .tiket-info h2{
+        font-size: 0.9em;
+    }
+
+    .tiket-box .tiket-bottom .tiket-info p{
+        font-size: 0.7em;
+    }
+
+    .tiket-box .tiket-bottom .tiket-btn a{
+        font-size: 1em;
+    }
+
+    .sec5-tit h2{
+        font-size: 1.5em;
+    }
+
+    .sec5-info h2{
+        font-size: 1em;
+    }
+
+    .sec5-info h1{
+        font-size: 1.75em;
+        margin: 8px 0;
+    }
+
+    .sec5-info p{
+        font-size: 0.5em;
+    }
+
+    .sec5-btn{
+        width: 100px;
+        height: 40px;
+    }
+
+    .sec5-btn a{
+        font-size: 0.9em;
+        line-height: 40px;
+    }
+
+    .sec5-img{
+        width: 300px;
+        height: 206.46px;
+    }
+
+    .sec6 .container{
+        margin: 100px 0 160px;
+    }
+
+    .sec6 .container h2{
+        font-size: 1.5em;
+        margin-bottom: 40px;
+    }
+
+    .mobile .mobile-icon, 
+    .windows-txt-box .windows-icon, 
+    .mac .mac-icon{
+        width: 80px;
+        height: 80px;
+    }
+
+    .windows-txt-box .windows-download-box p, 
+    .mobile-txt-box .mobile-download-box p, 
+    .mac-txt-box .mac-download-box p{
+        font-size: 1em;
+    }
+
+    .windows-txt-box .windows-download-box a,
+    .mobile-txt-box .mobile-download-box a,
+    .mac-txt-box .mac-download-box a
+    {
+        font-size: 0.8em;
+    }
+
+    .windows-txt-box .windows-download-box .download-icon, 
+    .mac-txt-box .mac-download-box .download-icon,
+    .mobile-txt-box .mobile-download-box .android .android-icon, 
+    .mobile-txt-box .mobile-download-box .appstore .appstore-icon{
+        width: 20px;
+        height: 20px;
+    }
+
+    
 
 }

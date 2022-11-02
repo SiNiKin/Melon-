@@ -10,8 +10,9 @@ $(document).ready(function(){
   
   });
 
-  $('.side-logo').click(function(){
+  $('.side-logo').click(function(e){
     $('.side-bar-menu').toggleClass('active');
+    $('.side-bar').toggleClass('active');
   });
 
   var mySwiper = new Swiper('.swiper-container', {
@@ -27,56 +28,11 @@ $(document).ready(function(){
   var mySwiper2 = new Swiper('.swiper-container-2', {
 
     direction : 'horizontal',
-    loop: false,
+    loop: true,
     speed: 1200,
     slidesPerView: "auto",
-    controller: {
-      control: mySwiper3
-    },
-    // on: {
-    //   transitionStart: function(){
-        
-    //     var videos = document.querySelectorAll('video');
-  
-    //     Array.prototype.forEach.call(videos, function(video){
-    //       video.pause();
-    //     });
-    //   },
-      
-    //   transitionEnd: function(){
-        
-    //     var activeIndex = this.activeIndex;
-    //     var activeSlide = document.getElementsByClassName('swiper-slide')[activeIndex];
-    //     var activeSlideVideo = activeSlide.getElementsByTagName('video')[0];
-    //     activeSlideVideo.play();
-      
-    //   },
-    
-    // }
-
-    on: {
-      activeIndexChange: function () {
-        var videos = document.querySelectorAll('video');  //수정
-        $('video').eq(this.realIndex).video.pause();
-      }
-    }
     
   });
-
-  var mySwiper3 = new Swiper('.swiper-container-3', {
-
-    speed: 1200,
-    grabCursor: true,
-    // centeredSlides: true,
-    slidesPerView: "auto",
-    controller: {
-      control: mySwiper2
-    }
-    
-  });
-  
-  mySwiper2.controller.control = mySwiper3;
-  mySwiper3.controller.control = mySwiper2;
     
   var mySwiper4 = new Swiper('.swiper-container-4', {
 
@@ -92,7 +48,19 @@ $(document).ready(function(){
   });
 
   $('.swiper-container-2 .melon-tv').click(function(){
-    
+    const result = $(this).attr('data-alt'); //data-alt 가져오기
+        
+        $('.sec3-top-left video,.sec3-top-txt').removeClass('active');
+        // $('#'+result).addClass('active');
+        $(`.${result}`).addClass('active');
   });
+
+  // let ww = $(window).width();
+  // layout();
+  // function layout(){
+  //   if(ww <= 840){
+  //     $('.m-a').attr('<br>');
+  //   }
+  // }
 
 });
