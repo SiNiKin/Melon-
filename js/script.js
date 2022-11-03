@@ -49,18 +49,32 @@ $(document).ready(function(){
 
   $('.swiper-container-2 .melon-tv').click(function(){
     const result = $(this).attr('data-alt'); //data-alt 가져오기
-        
-        $('.sec3-top-left video,.sec3-top-txt').removeClass('active');
-        // $('#'+result).addClass('active');
-        $(`.${result}`).addClass('active');
+
+    $('.sec3-top-left video,.sec3-top-txt').removeClass('active');
+    $(`.${result}`).addClass('active');
+    $(`.${result}`).get(0).play();
+
+    var vdo_cl = $('.sec3-top-left .tv1').hasClass('active');
+    var vdo_cl_2 = $('.sec3-top-left .tv2').hasClass('active');
+    var vdo_cl_3 = $('.sec3-top-left .tv3').hasClass('active');
+
+    if(vdo_cl == true){
+      $('.sec3-top-left .tv1').get(0).play();
+      $('.sec3-top-left .tv1').get(0).currentTime = 0;
+      console.log('1');
+    }else if(vdo_cl_2 == true){
+      $('.sec3-top-left .tv2').get(0).play();
+      $('.sec3-top-left .tv2').get(0).currentTime = 0;
+      console.log('2');
+    }
+    else if(vdo_cl_3 == true){
+      $('.sec3-top-left .tv3').get(0).play();
+      $('.sec3-top-left .tv3').get(0).currentTime = 0;
+
+      console.log('3');
+    }
   });
 
-  // let ww = $(window).width();
-  // layout();
-  // function layout(){
-  //   if(ww <= 840){
-  //     $('.m-a').attr('<br>');
-  //   }
-  // }
+
 
 });

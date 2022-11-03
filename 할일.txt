@@ -1,14 +1,10 @@
+new album 크기값 조정
+메인메거진 크기값 조정
+영상 클릭하면 처음부터 (클릭이벤트)
+티켓 가로스크롤
+sec6 phone 메인 이미지 위치값 조정
 
-사이드 바 다른 곳 클릭시 닫히게
-//.target
-        //지금 실제로 클릭한 요소
-        //.currentTarget
-        //지금 이벤트 리스너가 달린곳
-        $('.black-background').click(function(e){
-          console.log(e.target);
-          //내가 지금 클릭한 요소가 이벤트 리스너가 달린곳과 같다면 페이드 아웃 시켜줘
-          if( e.target == e.currentTarget){
-            $('.black-background').fadeOut();
-          }
 
-미디어쿼리 1000px 이후
+폰트어썸 폰트사이즈로 조정
+
+ 웹3 span 디자인 변경

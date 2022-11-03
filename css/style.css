@@ -2527,6 +2527,11 @@ header .container .hd-right a:hover{
         left: 25px;
         bottom: 50px;
     }
+
+    .mobile .mobile-img-box .phone img.mobile-img1{
+        left: 25px;
+    }
+
     .mobile-txt-box .mobile-download-box .android .android-icon, 
     .mobile-txt-box .mobile-download-box .appstore .appstore-icon{
         width: 30px;
@@ -2589,12 +2594,12 @@ header .container .hd-right a:hover{
     }
 
     .new-album-box{
-        margin-top: 94px;
+        margin-top: 75px;
     }
 
     .new-album-box .new-album{
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
         margin-right: 8px;
         margin-bottom: 8px;
     }
@@ -2653,13 +2658,17 @@ header .container .hd-right a:hover{
     }
 
     .chart-list .swiper-container{
-        height: auto;
+        height: 545px;
         margin: 0;
         padding-bottom: 20px;
     }
 
     .sec1 .swiper-slide{
         height: 80px;
+    }
+
+    .ch-music{
+        margin-bottom: 20px;
     }
 
     .ch-music .album-img{
@@ -2682,26 +2691,26 @@ header .container .hd-right a:hover{
 
     .main-magazine .sec2-green-box, 
     .main-magazine .sec2-green-box .magazine-box{
-        width: 250px;
-        height: 291.67px;
+        width: 300px;
+        height: 350px;
     }
 
     .main-magazine .sec2-green-box .magazine-box h1{
-        font-size: 1em;
-        margin-bottom: 8px;
+        font-size: 1.5em;
+        margin-bottom: 12px;
     }
 
     .main-magazine .sec2-green-box .magazine-box .main-magazine-img{
-        width: 170px;
-        height: 123.69px;
+        width: 200px;
+        height: 145.52px;
     }
 
     .main-magazine-info-box{
-        width: 190px;
+        width: 210px;
     }
 
     .main-magazine-info-box p.main-magazine-tit{
-        font-size: 0.625em;
+        font-size: 0.7em;
         margin: 4px 0;
     }
 
